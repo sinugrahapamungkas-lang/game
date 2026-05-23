@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindari Air Keras</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>💧 Hindari Air Keras</h1>
+            <div class="score-board">
+                <span>Score: <span id="score">0</span></span>
+                <span>Level: <span id="level">1</span></span>
+            </div>
+        </div>
+
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="screen hidden">
+            <div class="modal">
+                <h2>Game Over!</h2>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <p>Level Reached: <span id="finalLevel">1</span></p>
+                <button id="restartBtn" class="btn">Main Lagi</button>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen">
+            <div class="modal">
+                <h2>💧 Hindari Air Keras</h2>
+                <p>Hindari percikan air yang ditembakkan musuh!</p>
+                <div class="instructions">
+                    <h3>Cara Bermain:</h3>
+                    <ul>
+                        <li>🖱️ Gunakan Mouse atau Touch untuk bergerak</li>
+                        <li>⬅️ Hindari percikan air 💦</li>
+                        <li>🎯 Semakin lama hidup = Semakin tinggi skor</li>
+                        <li>⬆️ Level naik setiap 500 poin</li>
+                    </ul>
+                </div>
+                <button id="startBtn" class="btn">Mulai Bermain</button>
+            </div>
+        </div>
+
+        <!-- Pause Screen -->
+        <div id="pauseScreen" class="screen hidden">
+            <div class="modal">
+                <h2>⏸️ Pause</h2>
+                <button id="resumeBtn" class="btn">Lanjutkan</button>
+                <button id="menuBtn" class="btn">Menu Utama</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
